@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pictures</title>
+  </head>
+  <body>
+    <div class="hcontainer">
+      <div class="image-grid">
+        <img
+          class="image-grid-col-2 image-grid-row-2"
+          src="picturesofus/1.jpg"
+        />
+        <img src="picturesofus/2.jpg" />
+        <img src="picturesofus/3.jpg" />
+        <img src="picturesofus/4.jpg" />
+        <img src="picturesofus/5.jpg" />
+        <img src="picturesofus/6.jpg" />
+        <img src="picturesofus/7.jpg" />
+        <img src="picturesofus/8.jpg" />
+        <img src="picturesofus/9.jpg" />
+        <img src="picturesofus/10.jpg" />
+        <img src="picturesofus/11.jpg" />
+        <img src="picturesofus/12.jpg" />
+        <img src="picturesofus/13.jpg" />
+      </div>
+    </div>
+  </body>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .hcontainer {
+      min-height: 100vh;
+      width: 100%;
+      background-color: #485461;
+      background-image: linear-gradient(135deg, #3d454e 25%, #606060 74%);
+      font-family: "Poppins", sans-serif;
+    }
+
+    .image-grid {
+      --gap: 16px;
+      --num-cols: 4;
+      --row-height: 300px;
+
+      box-sizing: border-box;
+      padding: var(--gap);
+
+      display: grid;
+      grid-template-columns: repeat(var(--num-cols), 1fr);
+      grid-auto-rows: var(--row-height);
+      gap: var(--gap);
+    }
+
+    .image-grid > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-grid-col-2 {
+      grid-column: span 2;
+    }
+
+    .image-grid-row-2 {
+      grid-row: span 2;
+    }
+
+    /* Anything udner 1024px */
+    @media screen and (max-width: 1024px) {
+      .image-grid {
+        --num-cols: 2;
+        --row-height: 200px;
+      }
+    }
+  </style>
+</html>
